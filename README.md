@@ -4,6 +4,10 @@
 
 This is a very basic syntax highlighter (and formatting hack) for jinja wrappers to terraform code - you can use jinja to conditionally render terraform file contents, or dynamically render provisioners and providers within terraform.
 
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/dhananjaipai/vscode-jinjaform/publish.yml)
+![GitHub Release](https://img.shields.io/github/v/release/dhananjaipai/vscode-jinjaform)
+![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/djpai.jinjaform)
+
 ## Requirements
 
 - Expects syntax highlighting `source.hcl.terraform` from [Hashicorp Terraform](https://marketplace.visualstudio.com/items?itemName=HashiCorp.terraform) extension.  
