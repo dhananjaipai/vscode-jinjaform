@@ -1,6 +1,6 @@
 {
   "name": "jinjaform",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "displayName": "JinjaForm",
   "description": "Syntax highlighting for Jinja templated Terraform files",
   "publisher": "djpai",
