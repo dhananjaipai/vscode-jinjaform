@@ -1,0 +1,42 @@
+{
+  // symbols used for start and end a block comment. Remove this entry if your language does not support block comments
+  "comments": {
+		"lineComment": "#",
+		"blockComment": ["/*", "*/"]
+  },
+  // symbols used as brackets
+  "brackets": [
+    ["{#", "#}"],
+    ["{%", "%}"],
+    ["{{", "}}"],
+    ["{", "}"],
+    ["[", "]"],
+    ["(", ")"]
+  ],
+  // symbols that are auto closed when typing
+  "autoClosingPairs": [
+    ["@/", "/"],
+    ["{#", "#}"],
+    ["{%", "%}"],
+    ["{{", "}}"],
+    ["{", "}"],
+    ["[", "]"],
+    ["(", ")"],
+    ["\"", "\""],
+    ["'", "'"]
+  ],
+  // symbols that that can be used to surround a selection
+  "surroundingPairs": [
+    ["{", "}"],
+    ["[", "]"],
+    ["(", ")"],
+    ["\"", "\""],
+    ["'", "'"]
+  ],
+  "folding": {
+    "markers": {
+      "start": "{%-{0,1}\\+{0,1}\\s*(block|filter|for|if|macro|raw|with|set)",
+      "end": "{%-{0,1}\\+{0,1}\\s*end(block|filter|for|if|macro|raw|with|set)\\s*-{0,1}\\+{0,1}%}"
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "name": "jinjaform",
+  "version": "0.0.1",
+  "displayName": "JinjaForm",
+  "description": "Syntax highlighting for Jinja templated Terraform files",
+  "publisher": "djpai",
+  "license": "MIT",
+  "pricing": "Free",
+  "icon": "icon.jpg",
+  "engines": {
+    "vscode": "^1.54.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dhananjaipai/vscode-jinjaform.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dhananjaipai/vscode-jinjaform/issues"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "extensionDependencies": [
+    "wholroyd.jinja",
+    "hashicorp.terraform"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "jinjaform",
+        "aliases": [
+          "Jinjaform",
+          "Jinja-Terraform",
+          "jinja-terraform"
+        ],
+        "extensions": [
+          ".tf.j2",
+          ".tf.jinja",
+          ".tf.jinja2",
+          ".tfvars.j2",
+          ".tfvars.jinja",
+          ".tfvars.jinja2",
+          ".hcl.j2",
+          ".hcl.jinja",
+          ".hcl.jinja2"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "jinjaform",
+        "scopeName": "source.jinjaform",
+        "path": "./syntaxes/jinjaform.tmLanguage.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "conventional-changelog-conventionalcommits": "8.0.0",
+    "semantic-release": "24.0.0",
+    "semantic-release-vsce": "^5.7.2"
+  }
+}
