@@ -57,10 +57,14 @@ You may have to tweak the regexes based on how you are leveraging jinja features
 
 ## Known Issues
 
-1. Nested jinja blocks will not respect highlighting
+1. ~~Nested jinja blocks will not respect highlighting~~ **[FIXED in v1.0.2]** - Enhanced grammar now supports complex nested Jinja within Terraform structures. See [GRAMMAR_FIX.md](./GRAMMAR_FIX.md) for details.
 2. No language server capabilities of terraform is possible since it requires custom clients and request forwarding, which is beyond the scope for now.
 Refer [VSCode/Embedded Languages](https://code.visualstudio.com/api/language-extensions/embedded-languages#request-forwarding), [microsoft code samples](https://github.com/microsoft/vscode-extension-samples/blob/5651637c527e07173bd066f5fb7e171ef4616cab/lsp-embedded-request-forwarding/client/src/extension.ts#L50) and this [SO answer](https://stackoverflow.com/a/48995978/8453502) to understand the complexity.  
 3. Commenting is opinionated, since the syntax for commenting in jinja is different from terraform. By design, the comments for jinjaform uses terraform commenting `# inline` and `/* block */` since the expectation is that it will be rendered into terraform for use.
+
+### Remaining Edge Cases
+
+While v1.0.2 significantly improves nested structure support, extremely deep nesting (5+ levels) or highly dynamic patterns may still have partial highlighting issues. These would require a full language server implementation to resolve completely.
 
 ## Credits
 

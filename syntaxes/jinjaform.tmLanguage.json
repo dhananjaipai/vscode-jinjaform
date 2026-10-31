@@ -8,7 +8,67 @@
     },
     {
       "include": "source.hcl.terraform"
+    },
+    {
+      "name": "meta.embedded.jinja.terraform",
+      "begin": "(?=\\{[{%#])",
+      "end": "(?!\\{[{%#])",
+      "patterns": [
+        {
+          "include": "source.jinja"
+        }
+      ]
     }
   ],
-  "repository": {}
+  "repository": {
+    "jinja-block": {
+      "name": "meta.block.jinja",
+      "begin": "({%)\\s*(if|for|while|with|block|macro|call|raw|set|do)\\b",
+      "beginCaptures": {
+        "1": {
+          "name": "punctuation.definition.tag.jinja"
+        },
+        "2": {
+          "name": "keyword.control.jinja"
+        }
+      },
+      "end": "({%)\\s*end(if|for|while|with|block|macro|call|raw|set|do)\\b",
+      "endCaptures": {
+        "1": {
+          "name": "punctuation.definition.tag.jinja"
+        },
+        "2": {
+          "name": "keyword.control.jinja"
+        }
+      },
+      "patterns": [
+        {
+          "include": "source.jinja"
+        },
+        {
+          "include": "source.hcl.terraform"
+        }
+      ]
+    },
+    "jinja-variable": {
+      "name": "meta.variable.jinja",
+      "begin": "{{",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.tag.jinja"
+        }
+      },
+      "end": "}}",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.tag.jinja"
+        }
+      },
+      "patterns": [
+        {
+          "include": "source.jinja"
+        }
+      ]
+    }
+  }
 }
