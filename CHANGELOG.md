@@ -1,3 +1,9 @@
+## [1.1.1](https://github.com/dhananjaipai/vscode-jinjaform/compare/v1.1.0...v1.1.1) (2026-10-31)
+
+### Bug Fixes
+
+* add @vscode/vsce@4.1.0 with OIDC support ([3600342](https://github.com/dhananjaipai/vscode-jinjaform/commit/3600342e03169861dd09ef3c3a5c3fef0b1a98dc))
+
 ## [1.1.0](https://github.com/dhananjaipai/vscode-jinjaform/compare/v1.0.1...v1.1.0) (2026-10-31)
 
 ### Features
